@@ -12,8 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         >
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,7 +22,6 @@
             android:textAllCaps="true"
             android:textSize="20sp"
             android:textStyle="bold" />
-
         <TextView
             android:id="@+id/balance"
             android:layout_width="wrap_content"
@@ -34,18 +34,22 @@
 
 <!-- layout for card   -->
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/balance_layout"
         android:layout_margin="12dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        app:cardCornerRadius="12dp"
         >
 
         <!--   budget     -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,12 +62,12 @@
                     android:layout_height="wrap_content"
                     android:text="$400"
                     android:textStyle="bold"
-                    android:textSize="25dp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="BUDGET"
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
             </LinearLayout>
 
             <!--    expense      -->
@@ -79,20 +83,46 @@
                     android:layout_height="wrap_content"
                     android:text="$100"
                     android:textStyle="bold"
-                    android:textSize="25dp"/>
+                    android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="EXPENSE"
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
             </LinearLayout>
 
-
         </LinearLayout>
-
-
     </com.google.android.material.card.MaterialCardView>
 
+    <TextView
+        android:id="@+id/recycleview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dashboard"
+        android:text="Transactions"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recycleview_title"
+        android:layout_marginTop="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_add" />
 
 
 </RelativeLayout>
