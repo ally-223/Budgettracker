@@ -1,4 +1,4 @@
 package com.example.budgettracker
 
-class Transaction {
+data class Transaction(val label: String, val amount: Double) {
 }
