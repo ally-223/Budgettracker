@@ -108,21 +108,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dashboard"
-        android:text="Transactions"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_marginTop="12dp"
         android:layout_marginStart="10dp"
-        />
+        android:layout_marginTop="12dp"
+        android:text="Transactions"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/recycleview_title"
-        android:layout_marginTop="129dp" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -131,11 +134,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/purple_500"
         android:src="@drawable/ic_add"
-        android:backgroundTint="#CB5F48"
         app:borderWidth="0dp"
 
-      />
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </RelativeLayout>
